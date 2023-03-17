@@ -13,7 +13,7 @@ export default function Home() {
     <main
       className={`${font.className} w-screen h-screen bg-green-700 text-white flex justify-center items-center`}
     >
-      <h1 className="text-6xl">Welcome to m1nsuppp's UI LAB👨‍💻</h1>
+      <h1 className="px-2 text-6xl">Welcome to m1nsuppp's UI LAB👨‍💻</h1>
     </main>
   );
 }
