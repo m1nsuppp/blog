@@ -16,7 +16,7 @@ const Header: React.FC = () => {
       className={`${font.className} max-w-2xl mx-auto px-4 py-8 flex justify-between items-center`}
     >
       <h1 className="text-2xl tracking-tighter text-gray-700">
-        m1nsuppp's blog
+        {`m1nsuppp's blog`}
       </h1>
       <nav>
         <ul className="flex">
