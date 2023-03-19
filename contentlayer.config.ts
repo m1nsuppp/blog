@@ -1,5 +1,6 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import rehypePrettyCode from 'rehype-pretty-code';
+import remarkMdxImages from 'remark-mdx-images';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -22,6 +23,16 @@ export default makeSource({
   contentDirPath: 'posts',
   documentTypes: [Post],
   mdx: {
+    remarkPlugins: [remarkMdxImages],
     rehypePlugins: [[rehypePrettyCode]],
+    esbuildOptions: (options) => {
+      options.loader = {
+        ...options.loader,
+        '.png': 'dataurl',
+        '.gif': 'dataurl',
+      };
+
+      return options;
+    },
   },
 });
