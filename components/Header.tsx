@@ -18,14 +18,14 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`${font.className} max-w-2xl mx-auto px-4 py-8 flex justify-between items-center`}
+      className={`${font.className} max-w-4xl mx-auto px-4 py-8 flex justify-between items-center`}
     >
-      <h1 className="text-2xl tracking-tighter text-gray-700 hover:text-blue-600">
+      <h1 className="sm:text-4xl text-2xl tracking-tighter text-gray-700 hover:text-blue-600">
         <Link href={'/'}>{`m1nsuppp's blog`}</Link>
       </h1>
       <nav>
         <ul className="flex">
-          <li className="text-lg font-semibold pl-4">
+          <li className="sm:text-lg text-base font-semibold pl-4">
             <Link
               href={'/'}
               className={`${pathname === '/' ? 'text-blue-600' : ''}`}
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
               Posts
             </Link>
           </li>
-          <li className="text-lg font-semibold pl-4">
+          <li className="sm:text-lg text-base font-semibold pl-4">
             <Link
               href={'https://github.com/m1nsuppp'}
               className="text-gray-700 hover:text-blue-600"

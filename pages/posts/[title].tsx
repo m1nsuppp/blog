@@ -37,8 +37,8 @@ const PostPage: NextPage = ({
       <Head>
         <title>{post.title}</title>
       </Head>
-      <article className="max-w-2xl mx-auto py-12 px-4 prose lg:prose-xl">
-        <h1 className="font-bold md:font-black text-6xl md:text-7xl pr-6 md:pr-24 mb-4 hover:text-gray-600 tracking-tight max-w-2xl mx-auto">
+      <article className="max-w-4xl mx-auto py-12 px-4 prose lg:prose-xl">
+        <h1 className="font-bold md:font-black sm:text-6xl text-3xl pr-6 md:pr-24 mb-4 hover:text-gray-600 tracking-tight max-w-4xl mx-auto">
           {post.title}
         </h1>
         <MDXComponent />
