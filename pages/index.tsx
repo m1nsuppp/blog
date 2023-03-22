@@ -2,16 +2,14 @@ import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import { Post } from 'contentlayer/generated';
 import PostCard from '@/components/PostCard';
-import { GetStaticProps, GetStaticPropsContext, NextPage } from 'next';
+import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 
 interface Props {
   posts: Post[];
 }
 
-export const getStaticProps: GetStaticProps<Props> = async ({
-  params,
-}: GetStaticPropsContext) => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = allPosts.sort((a: Post, b: Post) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
@@ -21,7 +19,9 @@ export const getStaticProps: GetStaticProps<Props> = async ({
   };
 };
 
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage<Props> = ({
+  posts,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <>
       <Head>

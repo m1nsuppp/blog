@@ -17,7 +17,9 @@ const AUTHOR = 'm1nsuppp';
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: allPosts.map((p) => ({ params: { title: p._raw.flattenedPath } })),
+    paths: allPosts.map((post) => ({
+      params: { title: post._raw.flattenedPath },
+    })),
     fallback: false,
   };
 };

@@ -1,7 +1,7 @@
 import { Post } from '@/.contentlayer/generated';
 import Link from 'next/link';
 
-const PostCard = (post: Post) => {
+const PostCard: React.FC<Post> = (post) => {
   return (
     <article className="mt-12 text-gray-900">
       <Link href={post.url}>
