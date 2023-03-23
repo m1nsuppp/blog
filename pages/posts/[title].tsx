@@ -39,7 +39,7 @@ const PostPage: NextPage<Props> = ({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const MDXComponent = useMDXComponent(post.body.code);
-  const { title, description, url } = post;
+  const { title, description, url, thumbnail } = post;
 
   return (
     <>
@@ -50,6 +50,7 @@ const PostPage: NextPage<Props> = ({
         <meta property="og:site_name" content={AUTHOR} />
         <meta name="keywords" content={title} />
         <meta name="og:title" content={`${title} | m1nsuppp's blog`} />
+        <meta name="og:image" content={thumbnail} />
         <meta name="og:description" content={`${description}`} />
       </Head>
       <article className="max-w-4xl mx-auto py-12 px-4 prose lg:prose-xl">
