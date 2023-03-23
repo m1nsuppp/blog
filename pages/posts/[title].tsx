@@ -45,13 +45,13 @@ const PostPage: NextPage<Props> = ({
     <>
       <Head>
         <title>{`${title} | m1nsuppp's blog`}</title>
-        <meta content={description} name="description" />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={title} />
         <meta property="og:url" content={`https://www.m1nsuppp.site${url}`} />
         <meta property="og:site_name" content={AUTHOR} />
-        <meta name="keywords" content={title} />
-        <meta name="og:title" content={`${title} | m1nsuppp's blog`} />
-        <meta name="og:image" content={thumbnail} />
-        <meta name="og:description" content={`${description}`} />
+        <meta property="og:title" content={`${title} | m1nsuppp's blog`} />
+        <meta property="og:image" content={thumbnail} />
+        <meta property="og:description" content={description} />
       </Head>
       <article className="max-w-4xl mx-auto py-12 px-4 prose lg:prose-xl">
         <h1 className="font-bold md:font-black sm:text-6xl text-3xl pr-6 md:pr-24 mb-4 hover:text-gray-600 tracking-tight max-w-4xl mx-auto">
