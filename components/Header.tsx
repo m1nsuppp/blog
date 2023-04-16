@@ -1,21 +1,19 @@
+'use client';
+
 import React from 'react';
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
 import { NextFont } from 'next/dist/compiled/@next/font';
-import { useRouter } from 'next/router';
+import { usePathname } from 'next/navigation';
+import { NavItem } from '@/types';
 
-type NavLink = {
-  name: string;
-  href: string;
-};
-
-const links: NavLink[] = [
+const navItems: NavItem[] = [
   {
-    name: 'Posts',
+    title: 'Posts',
     href: '/',
   },
   {
-    name: 'GitHub',
+    title: 'GitHub',
     href: 'https://github.com/m1nsuppp',
   },
 ];
@@ -29,8 +27,7 @@ const font: NextFont = Montserrat({
 });
 
 const Header: React.FC = () => {
-  const router = useRouter();
-  const { pathname } = router;
+  const pathname = usePathname();
 
   return (
     <header
@@ -41,9 +38,9 @@ const Header: React.FC = () => {
       </h1>
       <nav>
         <ul className="flex">
-          {links.map((link) => (
+          {navItems.map((link) => (
             <li
-              key={link.name}
+              key={link.title}
               className="sm:text-lg text-base font-semibold pl-4"
             >
               <Link
@@ -52,7 +49,7 @@ const Header: React.FC = () => {
                   pathname === link.href ? 'text-blue-600' : 'text-gray-700'
                 }`}
               >
-                {link.name}
+                {link.title}
               </Link>
             </li>
           ))}
