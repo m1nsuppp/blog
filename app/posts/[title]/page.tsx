@@ -1,6 +1,5 @@
 import PostArticle from '@/components/PostArticle';
 import { allPosts, Post } from '@/.contentlayer/generated';
-import { NextPage } from 'next';
 import type { Metadata } from 'next';
 import { siteConfig } from '@/config/site';
 
@@ -10,7 +9,7 @@ type PostPageParams = {
   };
 };
 
-export const getPostByTitle = async ({ params }: PostPageParams) => {
+const getPostByTitle = async ({ params }: PostPageParams) => {
   const post = allPosts.find(
     (post) => post._raw.flattenedPath === params.title
   );
@@ -50,11 +49,8 @@ export const generateMetadata = async ({
   };
 };
 
-/* @ts-expect-error Async Server Component */
-const PostPage: NextPage = async ({ params }: PostPageParams) => {
+const PostPage = async ({ params }: PostPageParams) => {
   const post = (await getPostByTitle({ params })) ?? ({} as Post);
-
-  console.log({ post });
 
   return <PostArticle post={post} />;
 };
