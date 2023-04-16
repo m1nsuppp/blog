@@ -4,6 +4,22 @@ import Link from 'next/link';
 import { NextFont } from 'next/dist/compiled/@next/font';
 import { useRouter } from 'next/router';
 
+type NavLink = {
+  name: string;
+  href: string;
+};
+
+const links: NavLink[] = [
+  {
+    name: 'Posts',
+    href: '/',
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/m1nsuppp',
+  },
+];
+
 const font: NextFont = Montserrat({
   weight: '300',
   style: 'normal',
@@ -25,22 +41,21 @@ const Header: React.FC = () => {
       </h1>
       <nav>
         <ul className="flex">
-          <li className="sm:text-lg text-base font-semibold pl-4">
-            <Link
-              href={'/'}
-              className={`${pathname === '/' ? 'text-blue-600' : ''}`}
+          {links.map((link) => (
+            <li
+              key={link.name}
+              className="sm:text-lg text-base font-semibold pl-4"
             >
-              Posts
-            </Link>
-          </li>
-          <li className="sm:text-lg text-base font-semibold pl-4">
-            <Link
-              href={'https://github.com/m1nsuppp'}
-              className="text-gray-700 hover:text-blue-600"
-            >
-              GitHub
-            </Link>
-          </li>
+              <Link
+                href={link.href}
+                className={`hover:text-blue-600 ${
+                  pathname === link.href ? 'text-blue-600' : 'text-gray-700'
+                }`}
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>

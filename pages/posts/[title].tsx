@@ -9,9 +9,9 @@ import { allPosts, Post } from '@/.contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import Head from 'next/head';
 
-interface Props {
+type PostPageProps = {
   post: Post;
-}
+};
 
 const AUTHOR = 'm1nsuppp';
 
@@ -24,7 +24,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = async ({
+export const getStaticProps: GetStaticProps<PostPageProps> = async ({
   params,
 }: GetStaticPropsContext) => {
   const post = allPosts.find((p) => p._raw.flattenedPath === params?.title)!;
@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps<Props> = async ({
   };
 };
 
-const PostPage: NextPage<Props> = ({
+const PostPage: NextPage<PostPageProps> = ({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const MDXComponent = useMDXComponent(post.body.code);

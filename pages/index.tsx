@@ -5,9 +5,9 @@ import PostCard from '@/components/PostCard';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
 
-interface Props {
+type Props = {
   posts: Post[];
-}
+};
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const posts = allPosts.sort((a: Post, b: Post) => {
@@ -28,7 +28,7 @@ const Home: NextPage<Props> = ({
         <meta property="og:url" content="https://www.m1nsuppp.site/" />
       </Head>
       <main className="max-w-4xl mx-auto p-4">
-        {posts.map((post: Post) => (
+        {posts.map((post) => (
           <PostCard key={post._id} {...post} />
         ))}
       </main>
