@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const PostCard: React.FC<Post> = (post) => {
   return (
-    <article className="mt-12 text-gray-900">
+    <article className="mt-12 text-white">
       <Link href={post.url}>
-        <h2 className="font-bold text-3xl mb-4 hover:text-gray-600">
+        <h2 className="font-bold text-3xl mb-4 hover:text-red-400">
           {post.title}
         </h2>
         <p className="text-base tracking-tight">
