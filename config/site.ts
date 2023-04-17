@@ -4,6 +4,6 @@ export const siteConfig: SiteConfig = {
   name: `m1nsuppp's blog`,
   author: 'm1nsuppp',
   description: '프론트엔드에 관심이 많은 개발자의 블로그',
-  ogImage: '',
+  ogImage: 'https://m1nsuppp.site/og.png',
   url: 'https://m1nsuppp.site',
 };
