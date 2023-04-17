@@ -39,7 +39,7 @@ export const generateMetadata = async ({
       url: `${siteConfig.url}${url}`,
       images: [
         {
-          url: thumbnail ?? '',
+          url: thumbnail,
           width: 300,
           height: 300,
           alt: title,
