@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { NextFont } from 'next/dist/compiled/@next/font';
 import { usePathname } from 'next/navigation';
 import { NavItem } from '@/types';
+import { siteConfig } from '@/config/site';
 
 const navItems: NavItem[] = [
   {
@@ -33,8 +34,8 @@ const Header: React.FC = () => {
     <header
       className={`${font.className} max-w-4xl mx-auto px-4 py-8 flex justify-between items-center`}
     >
-      <h1 className="sm:text-4xl text-2xl tracking-tighter text-gray-700 hover:text-blue-600">
-        <Link href={'/'}>{`m1nsuppp's blog`}</Link>
+      <h1 className="sm:text-4xl text-2xl tracking-tighter text-white hover:text-red-400">
+        <Link href={'/'}>{siteConfig.name}</Link>
       </h1>
       <nav>
         <ul className="flex">
@@ -45,8 +46,10 @@ const Header: React.FC = () => {
             >
               <Link
                 href={link.href}
-                className={`hover:text-blue-600 ${
-                  pathname === link.href ? 'text-blue-600' : 'text-gray-700'
+                className={`border-b hover:border-b-red-400 hover:text-red-400 ${
+                  pathname === link.href
+                    ? 'border-b-red-400 text-red-400'
+                    : 'border-b-transparent text-white'
                 }`}
               >
                 {link.title}

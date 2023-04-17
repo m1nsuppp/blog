@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="ko">
-      <body className="max-w-4xl mx-auto p-4">
+      <body className="max-w-4xl mx-auto p-4 bg-black/90">
         <Header />
         {children}
       </body>
