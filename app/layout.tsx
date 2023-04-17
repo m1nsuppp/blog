@@ -29,6 +29,15 @@ export const metadata: Metadata = {
     type: 'website',
     url: siteConfig.url,
     description: siteConfig.description,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 576,
+        height: 720,
+        alt: siteConfig.name,
+      },
+    ],
   },
 };
 
