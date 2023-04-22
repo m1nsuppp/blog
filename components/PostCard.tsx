@@ -1,7 +1,11 @@
 import { Post } from '@/.contentlayer/generated';
 import Link from 'next/link';
 
-const PostCard: React.FC<Post> = (post) => {
+type PostCardProps = {
+  post: Post;
+};
+
+const PostCard: React.FC<PostCardProps> = ({ post }) => {
   return (
     <article className="mt-12 text-white">
       <Link href={post.url}>
