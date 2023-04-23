@@ -7,7 +7,7 @@ type PostProps = {
   post: Post;
 };
 
-const PostArticle: React.FC<PostProps> = ({ post }) => {
+export default function PostArticle({ post }: PostProps) {
   const MDXComponent = useMDXComponent(post.body.code);
   const { title } = post;
 
@@ -30,6 +30,4 @@ const PostArticle: React.FC<PostProps> = ({ post }) => {
       />
     </article>
   );
-};
-
-export default PostArticle;
+}

@@ -11,13 +11,13 @@ type PostPageParams = {
   };
 };
 
-const getPostByTitle = async ({ params }: PostPageParams) => {
+async function getPostByTitle({ params }: PostPageParams) {
   const post = allPosts.find(
     (post) => post._raw.flattenedPath === params.title
   );
 
   return post;
-};
+}
 
 export const generateMetadata = async ({
   params,
@@ -52,7 +52,7 @@ export const generateMetadata = async ({
       };
 };
 
-const PostPage = async ({ params }: PostPageParams) => {
+export default async function PostPage({ params }: PostPageParams) {
   const post = await getPostByTitle({ params });
 
   if (post === undefined) {
@@ -60,6 +60,4 @@ const PostPage = async ({ params }: PostPageParams) => {
   }
 
   return <PostArticle post={post} />;
-};
-
-export default PostPage;
+}
