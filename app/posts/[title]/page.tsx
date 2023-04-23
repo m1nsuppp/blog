@@ -3,7 +3,7 @@ import { defaultMetadata } from '@/constants/metadata';
 import { allPosts } from '@/.contentlayer/generated';
 import { siteConfig } from '@/config/site';
 import PostArticle from '@/components/PostArticle';
-import Loading from '@/components/ui/Loading';
+import NotFound from '@/components/NotFound';
 
 type PostPageParams = {
   params: {
@@ -55,9 +55,5 @@ export const generateMetadata = async ({
 export default async function PostPage({ params }: PostPageParams) {
   const post = await getPostByTitle({ params });
 
-  if (post === undefined) {
-    return <Loading />;
-  }
-
-  return <PostArticle post={post} />;
+  return post === undefined ? <NotFound /> : <PostArticle post={post} />;
 }
