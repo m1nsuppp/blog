@@ -1,4 +1,4 @@
-const Loading: React.FC = () => {
+export default function Loading() {
   return (
     <div className="text-center">
       <div role="status">
@@ -22,6 +22,4 @@ const Loading: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Loading;
+}

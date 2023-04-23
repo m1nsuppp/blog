@@ -5,7 +5,7 @@ type PostCardProps = {
   post: Post;
 };
 
-const PostCard: React.FC<PostCardProps> = ({ post }) => {
+export default function PostCard({ post }: PostCardProps) {
   return (
     <article className="mt-12 text-white">
       <Link href={post.url}>
@@ -21,6 +21,4 @@ const PostCard: React.FC<PostCardProps> = ({ post }) => {
       </Link>
     </article>
   );
-};
-
-export default PostCard;
+}

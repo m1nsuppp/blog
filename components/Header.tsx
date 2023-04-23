@@ -27,7 +27,7 @@ const font: NextFont = Montserrat({
   fallback: ['system-ui'],
 });
 
-const Header: React.FC = () => {
+export default function Header() {
   const pathname = usePathname();
 
   return (
@@ -60,6 +60,4 @@ const Header: React.FC = () => {
       </nav>
     </header>
   );
-};
-
-export default Header;
+}

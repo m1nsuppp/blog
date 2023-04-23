@@ -2,15 +2,15 @@ import { compareDesc } from 'date-fns';
 import { allPosts } from 'contentlayer/generated';
 import PostCard from '@/components/PostCard';
 
-const getPosts = async () => {
+async function getPosts() {
   const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
 
   return posts;
-};
+}
 
-const HomePage = async () => {
+export default async function HomePage() {
   const posts = await getPosts();
 
   return (
@@ -20,6 +20,4 @@ const HomePage = async () => {
       ))}
     </main>
   );
-};
-
-export default HomePage;
+}

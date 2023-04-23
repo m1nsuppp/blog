@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 };
 
-const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
       <body className="max-w-4xl mx-auto p-4 bg-black/90">
@@ -50,6 +50,4 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       </body>
     </html>
   );
-};
-
-export default RootLayout;
+}
