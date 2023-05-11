@@ -1,4 +1,4 @@
-import Header from '@/components/Header';
+import Header from '@/components/header';
 import { siteConfig } from '@/config/site';
 import '@/styles/globals.css';
 import type { Metadata } from 'next';
