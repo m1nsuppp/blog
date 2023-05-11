@@ -5,8 +5,8 @@ import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
 import { NextFont } from 'next/dist/compiled/@next/font';
 import { usePathname } from 'next/navigation';
-import { NavItem } from '@/types';
 import { siteConfig } from '@/config/site';
+import { NavItem } from '@/types';
 
 const navItems: NavItem[] = [
   {
