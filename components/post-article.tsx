@@ -18,7 +18,7 @@ export default function PostArticle({ post }: PostProps) {
       </h1>
       <MDXComponent
         components={{
-          h2: (h2) => <h2 className="text-white">{h2.children}</h2>,
+          h3: (h3) => <h3 className="text-white">{h3.children}</h3>,
           p: (p) => <p className="text-white">{p.children}</p>,
           code: (code) => (
             <code className="text-blue-500">{code.children}</code>
