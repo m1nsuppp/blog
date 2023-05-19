@@ -9,7 +9,7 @@ export default function PostCard({ post }: PostCardProps) {
   return (
     <article className="mt-12 text-white">
       <Link href={post.url}>
-        <h2 className="font-bold text-3xl mb-4 hover:text-red-400">
+        <h2 className="font-bold text-xl tracking-tight mb-4 hover:text-red-400">
           {post.title}
         </h2>
         <p className="text-base tracking-tight">

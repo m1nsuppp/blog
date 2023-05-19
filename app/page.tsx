@@ -14,7 +14,7 @@ export default async function HomePage() {
   const posts = await getPosts();
 
   return (
-    <main className="max-w-4xl mx-auto p-4">
+    <main className="w-full mx-auto">
       {posts.map((post) => (
         <PostCard key={post._id} post={{ ...post }} />
       ))}

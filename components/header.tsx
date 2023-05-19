@@ -7,6 +7,7 @@ import { NextFont } from 'next/dist/compiled/@next/font';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/config/site';
 import { NavItem } from '@/types';
+import { cls } from '@/lib/utils';
 
 const navItems: NavItem[] = [
   {
@@ -32,31 +33,30 @@ export default function Header() {
 
   return (
     <header
-      className={`${font.className} max-w-4xl mx-auto px-4 py-8 flex justify-between items-center`}
+      className={cls(
+        font.className,
+        'w-full py-4 mx-auto',
+        'flex justify-between items-end'
+      )}
     >
-      <h1 className="sm:text-4xl text-2xl tracking-tighter text-white hover:text-red-400">
+      <h1 className="tracking-tighter text-2xl text-gray-300">
         <Link href={'/'}>{siteConfig.name}</Link>
       </h1>
-      <nav>
-        <ul className="flex">
-          {navItems.map((link) => (
-            <li
-              key={link.title}
-              className="sm:text-lg text-base font-semibold pl-4"
-            >
-              <Link
-                href={link.href}
-                className={`border-b hover:border-b-red-400 hover:text-red-400 ${
-                  pathname === link.href
-                    ? 'border-b-red-400 text-red-400'
-                    : 'border-b-transparent text-white'
-                }`}
-              >
-                {link.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <nav className="flex justify-center items-center gap-x-4 tracking-tighter">
+        {navItems.map((link) => (
+          <Link
+            key={link.title}
+            href={link.href}
+            className={cls(
+              'border-b hover:border-b-red-400 hover:text-red-400',
+              pathname === link.href
+                ? 'border-b-red-400 text-red-400'
+                : 'border-b-transparent text-white'
+            )}
+          >
+            {link.title}
+          </Link>
+        ))}
       </nav>
     </header>
   );
