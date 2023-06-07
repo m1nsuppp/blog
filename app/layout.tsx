@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
-      <body className="max-w-lg mx-auto p-4 bg-black/90">
+      <body className="max-w-3xl mx-auto p-4 bg-black/90">
         <Header />
         {children}
       </body>
