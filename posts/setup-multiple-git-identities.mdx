@@ -1,0 +1,145 @@
+---
+title: 🔑 SSH key로 여러 개의 Git ID 관리하기
+description: 그리고, 여러 개의 Github 계정 관리하는 방법도 알아보기
+date: 2023-06-07
+thumbnail: foo
+---
+
+각각의 이유로 여러 개의 Git ID를 사용하고 싶을 수가 있다.
+
+나의 경우는 회사와 개인을 분리하고 싶었다.
+
+이럴 때, SSH Key를 통해 하나의 컴퓨터에서도 여러 개의 Git ID를 관리할 수 있다.
+
+**_(+) 이 글은 Github 계정을 여러 개 관리하는 것에 대해 다룬다._**
+
+## 1. SSH Key를 생성한다.
+
+```shell
+$ mkdir -p ~/.ssh
+
+$ cd ~/.ssh
+
+$ ssh-keygen -t rsa -b 4096 -C "work_account@email.com" -f "id_rsa_work"
+
+$ ssh-keygen -t rsa -b 4096 -C "personal_account@email.com" -f "id_rsa_personal"
+```
+
+### 1.1. SSH Key가 정상적으로 생성되었는지 확인한다.
+
+```shell
+ls -al ~/.ssh
+```
+
+아래와 같이 `*.pub`파일이 같이 생성되었다면, 정상적으로 생성된 것이다.
+
+```shell
+-rw-------   1 username  staff  3381  3 23 23:40 id_rsa_work
+-rw-r--r--   1 username  staff   744  3 23 23:40 id_rsa_work.pub
+-rw-------   1 username  staff  3381  4 19 16:44 id_rsa_personal
+-rw-r--r--   1 username  staff   744  4 19 16:44 id_rsa_personal.pub
+```
+
+## 2. SSH-agent에 key를 등록한다.
+
+```shell
+$ ssh-add ~/.ssh/id_rsa_work
+
+$ ssh-add ~/.ssh/id_rsa_personal
+```
+
+## 3. 각 Git Repository에 대해 SSH Key를 설정한다.
+
+```shell
+vi config
+```
+
+그리고 아래와 같이 업무용 Git ID와 개인용 Git ID에 대해 config 파일을 작성한다.
+
+```text
+# work
+Host github.com-work
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/id_rsa_work
+
+# personal
+Host github.com-personal
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa_personal
+```
+
+## 4. 각 Github 계정에 SSH Key를 등록한다.
+
+이 때, 등록할 파일의 내용은 **1. SSH Key를 생성한다.**단계에서 생성된 `*.pub` 파일의 내용이다.
+
+[SSH Key를 등록할 수 있는 페이지](https://github.com/settings/keys)에서 **New SSH key** 버튼을 클릭하고, `*.pub` 파일의 내용을 입력한다.
+
+## 5. SSH 연결 테스트
+
+```shell
+$ ssh -T git@github.com-personal (개인 계정)
+$ ssh -T git@github.com-work (업무용 계정)
+```
+
+그리고 아래와 같이 화면에 출력되면, 성공적으로 SSH Key가 등록된 것이다.
+
+```text
+Hi username! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+---
+
+## repository clone 하기
+
+**_이 때, HTTPS가 아닌 SSH로 clone해야한다._**
+
+```shell
+// 개인 계정
+$ git clone git@github.com-personal:username/user-repo.git
+
+// 업무용 계정
+$ git clone git@github.com-work:workname/work-repo.git
+```
+
+## .gitconfig 파일을 수정하여 directory에 따라 다른 Github 계정 사용하기
+
+1. 먼저 아래와 같이 개인용 계정과 업무용 계정에 대해 각각 config 파일을 작성한다.
+
+```shell
+$ vi ~/.gitconfig-work (업무용 Github 계정 설정)
+[user]
+  	email = work_account@email.com
+  	name = work_account_username
+```
+
+```shell
+$ vi ~/.gitconfig-personal (개인용 Github 계정 설정)
+[user]
+  	email = personal_account@email.com
+  	name = personal_account_username
+```
+
+2. .gitconfig 내용을 아래와 같이 수정한다.
+
+이 때, 기존에 작성된 내용은 모두 지우고, 아래와 같이 작성하는 편이 낫다.
+
+```shell
+$ vi ~/.gitconfig
+
+[includeIf "gitdir:~/your-directory/"]
+  	path = .gitconfig-personal
+[includeIf "gitdir:~/work-directory/"]
+  	path = .gitconfig-work
+```
+
+3. 해당 작업경로에서 username 확인해보기
+
+```shell
+$ cd your-directory
+$ git config --show-origin --get user.name
+
+$ cd work-directory
+$ git config --show-origin --get user.name
+```
