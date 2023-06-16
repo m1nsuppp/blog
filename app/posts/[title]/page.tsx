@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { defaultMetadata } from '@/constants/metadata';
 import { allPosts } from '@/.contentlayer/generated';
 import { siteConfig } from '@/config/site';
-import PostArticle from '@/components/post-article';
+import PostArticle from '@/components/post/post-article';
 import { notFound } from 'next/navigation';
 
 type PostPageParams = {
