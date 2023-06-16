@@ -18,6 +18,7 @@ export default function PostArticle({ post }: PostProps) {
       </h1>
       <MDXComponent
         components={{
+          h2: (h2) => <h2 className="text-white">{h2.children}</h2>,
           h3: (h3) => <h3 className="text-white">{h3.children}</h3>,
           p: (p) => (
             <p className="text-gray-300 text-sm tracking-tight">{p.children}</p>
@@ -34,6 +35,11 @@ export default function PostArticle({ post }: PostProps) {
             <strong className="text-red-400 text-sm tracking-tight">
               {strong.children}
             </strong>
+          ),
+          a: (a) => (
+            <a className="text-blue-300" href={a.href}>
+              {a.children}
+            </a>
           ),
         }}
       />
