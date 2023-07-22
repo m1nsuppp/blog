@@ -1,4 +1,4 @@
-export const Path = {
-  HOME: '/',
-  POSTS: '/posts',
+export const PATH_NAME = {
+  home: '/',
+  posts: '/posts',
 };

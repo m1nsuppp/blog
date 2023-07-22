@@ -9,7 +9,7 @@ type RootLayoutProps = {
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="ko">
-      <body className="min-h-screen bg-neutral-800">
+      <body className="min-h-screen bg-neutral-800 text-white">
         <Navbar />
         {children}
       </body>

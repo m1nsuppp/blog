@@ -1,5 +1,5 @@
 import { navItems } from '@/data/navbar';
-import { Path } from '@/lib/constants';
+import { PATH_NAME } from '@/lib/constants';
 import Link from 'next/link';
 import { Montserrat } from 'next/font/google';
 import { cn } from '@/lib/utils';
@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
       )}
     >
       <Link
-        href={Path.HOME}
+        href={PATH_NAME.home}
         className="text-2xl hover:text-red-400"
       >
         {'m1nsuppp'}
