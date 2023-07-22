@@ -22,12 +22,9 @@ const Navbar: React.FC = () => {
         'text-white -tracking-widest mx-auto'
       )}
     >
-      <Link
-        href={PATH_NAME.home}
-        className="text-2xl hover:text-red-400"
-      >
-        {'m1nsuppp'}
-      </Link>
+      <h1 className="text-2xl hover:text-red-400">
+        <Link href={PATH_NAME.home}>{'m1nsuppp'}</Link>
+      </h1>
       <div>
         {navItems.map((navItem) => (
           <Link
