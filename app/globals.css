@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hljs-keyword {
+  color: #ff5555;
+}
+
+.hljs-comment {
+  color: #6272a4;
+}
+
+.hljs-string {
+  color: #8be9fd;
+}
+
+.hljs-title.function_ {
+  color: #bd93f9;
+}
