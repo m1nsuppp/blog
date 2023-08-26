@@ -6,6 +6,7 @@ export type SiteConfig = {
   links: {
     github: string;
   };
+  author: string;
 };
 
 export type NavItem = {
