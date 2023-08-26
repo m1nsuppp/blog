@@ -18,8 +18,10 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "@/*": ["./*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     }
   },
   "include": [
@@ -29,7 +31,8 @@
     ".next/types/**/*.ts",
     ".eslintrc.cjs",
     "tailwind.config.cjs",
-    "postcss.config.cjs"
+    "postcss.config.cjs",
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }

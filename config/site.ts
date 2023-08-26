@@ -8,4 +8,5 @@ export const siteConfig: SiteConfig = {
   links: {
     github: 'https://github.com/m1nsuplee',
   },
+  author: 'm1nsuplee',
 };
