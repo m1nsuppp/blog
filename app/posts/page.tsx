@@ -1,15 +1,6 @@
-import { allPosts } from '@/.contentlayer/generated';
 import PostList from '@/components/Post/PostList';
 import { cn } from '@/lib/cn';
-import { compareDesc } from 'date-fns';
-
-const getPostList = async () => {
-  const postList = allPosts.sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
-
-  return postList;
-};
+import { getPostList } from '@/lib/post';
 
 const PostsPage = async () => {
   const postList = await getPostList();
