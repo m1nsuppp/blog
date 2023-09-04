@@ -1,4 +1,4 @@
-import { navItems } from '@/config/nav';
+import { navItems } from '@/components/Header/data';
 import Link from 'next/link';
 import NavigationItem from './NavigationItem';
 import { cn } from '@/lib/cn';
