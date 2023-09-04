@@ -1,7 +1,7 @@
 import { siteConfig } from '@/config/site';
 import { MetadataRoute } from 'next';
 
-const robots = () => {
+const robots = (): MetadataRoute.Robots => {
   const baseURL = siteConfig.url;
 
   return {
