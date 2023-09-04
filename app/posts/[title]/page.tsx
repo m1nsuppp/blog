@@ -1,4 +1,4 @@
-import PostArticle from '@/components/Post/PostArticle';
+import PostArticle from '@/components/Post1/PostArticle1';
 import { getPostByTitle, getPostList } from '@/lib/post';
 import { PostDetailPageParams } from '@/types/url-params';
 

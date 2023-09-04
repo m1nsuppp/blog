@@ -1,5 +1,5 @@
 import { Post } from '@/.contentlayer/generated';
-import PostCard from './PostCard';
+import PostCard from './PostCard1';
 
 type PostListProps = {
   postList: Post[];

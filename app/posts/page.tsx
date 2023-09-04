@@ -1,4 +1,4 @@
-import PostList from '@/components/Post/PostList';
+import PostList from '@/components/Post1/PostList1';
 import { cn } from '@/lib/cn';
 import { getPostList } from '@/lib/post';
 
