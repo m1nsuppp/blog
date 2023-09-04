@@ -1,6 +1,6 @@
 import PostArticle from '@/components/Post/PostArticle';
 import { getPostByTitle, getPostList } from '@/lib/post';
-import { PostDetailPageParams } from '@/types/post';
+import { PostDetailPageParams } from '@/types/url-params';
 
 export const generateStaticParams = async () => {
   const postList = await getPostList();

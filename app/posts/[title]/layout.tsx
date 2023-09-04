@@ -1,6 +1,6 @@
 import { siteConfig } from '@/config/site';
 import { getPostByTitle } from '@/lib/post';
-import { PostDetailPageParams } from '@/types/post';
+import { PostDetailPageParams } from '@/types/url-params';
 
 type PostLayoutProps = {
   children: React.ReactNode;
