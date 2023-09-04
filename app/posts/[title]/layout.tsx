@@ -35,8 +35,8 @@ export const generateMetadata = async ({ params }: PostDetailPageParams) => {
   };
 };
 
-const PostLayout = ({ children }: PostLayoutProps) => {
+const PostRootLayout = ({ children }: PostLayoutProps) => {
   return <main className="max-w-4xl mx-auto p-2">{children}</main>;
 };
 
-export default PostLayout;
+export default PostRootLayout;

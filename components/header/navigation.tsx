@@ -1,6 +1,6 @@
-import { navItems } from '@/components/Header/data';
+import { navItems } from '@/components/header/data';
 import Link from 'next/link';
-import NavigationItem from './NavigationItem';
+import NavigationItem from './navigation-item';
 import { cn } from '@/lib/cn';
 import { Montserrat } from 'next/font/google';
 

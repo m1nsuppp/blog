@@ -1,4 +1,4 @@
-import Header from '@/components/Header/Header';
+import Header from '@/components/header/header';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/cn';
 import '@/styles/globals.css';
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html lang="ko">
       <head />
@@ -51,4 +51,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
