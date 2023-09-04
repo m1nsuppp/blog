@@ -1,4 +1,4 @@
-import Header from '@/components/Header/Header';
+import Header from '@/components/Header1/Header1';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/cn';
 import '@/styles/globals.css';

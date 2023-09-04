@@ -1,4 +1,4 @@
-import Navigation from './Navigation';
+import Navigation from './Navigation1';
 
 const Header = () => {
   return (
