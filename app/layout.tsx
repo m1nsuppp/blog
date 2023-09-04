@@ -37,6 +37,9 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
     siteName: siteConfig.name,
   },
+  verification: {
+    google: 'NbB2lZ4_61PvGarA92ve8GkzLdoM5DRiU4288ys_GR8',
+  },
 };
 
 const RootLayout = ({ children }: RootLayoutProps) => {
