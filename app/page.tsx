@@ -1,7 +1,7 @@
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/cn';
 
-export default function Home() {
+const HomePage = () => {
   return (
     <main className="w-screen flex justify-center items-center">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -16,4 +16,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+export default HomePage;
