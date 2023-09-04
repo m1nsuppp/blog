@@ -2,7 +2,7 @@ import { siteConfig } from '@/config/site';
 import { getPostList } from '@/lib/post';
 import { MetadataRoute } from 'next';
 
-const sitemap = async () => {
+const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
   const baseURL = siteConfig.url;
 
   const postList = await getPostList();
