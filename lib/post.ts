@@ -2,12 +2,12 @@ import { allPosts } from '@/.contentlayer/generated';
 import { compareDesc } from 'date-fns';
 import { cache } from 'react';
 
-export const getPostList = cache(async () => {
-  const postList = allPosts.sort((a, b) => {
+export const getPosts = cache(async () => {
+  const posts = allPosts.sort((a, b) => {
     return compareDesc(new Date(a.date), new Date(b.date));
   });
 
-  return postList;
+  return posts;
 });
 
 export const getPostByTitle = async (title: string) => {
