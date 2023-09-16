@@ -1,11 +1,11 @@
 import { siteConfig } from '@/config/site';
-import { getPostList } from '@/lib/post';
+import { getPosts } from '@/lib/post';
 import { MetadataRoute } from 'next';
 
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
   const baseURL = siteConfig.url;
 
-  const postList = await getPostList();
+  const posts = await getPosts();
 
   const homeURL: MetadataRoute.Sitemap = [
     {
@@ -25,14 +25,14 @@ const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
     },
   ];
 
-  const postURLList: MetadataRoute.Sitemap = postList.map((post) => ({
+  const postURLs: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${baseURL}${post.url}`,
     lastModified: post.date,
     changeFrequency: 'weekly',
     priority: 0.5,
   }));
 
-  return [...homeURL, ...postURL, ...postURLList];
+  return [...homeURL, ...postURL, ...postURLs];
 };
 
 export default sitemap;

@@ -1,11 +1,11 @@
 import PostArticle from '@/components/post/post-article';
-import { getPostByTitle, getPostList } from '@/lib/post';
+import { getPostByTitle, getPosts } from '@/lib/post';
 import { PostDetailPageParams } from '@/types/url-params';
 
 export const generateStaticParams = async () => {
-  const postList = await getPostList();
+  const posts = await getPosts();
 
-  return postList;
+  return posts;
 };
 
 const PostDetailPage = async ({ params }: PostDetailPageParams) => {

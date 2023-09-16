@@ -1,13 +1,13 @@
 import PostList from '@/components/post/post-list';
 import { cn } from '@/lib/cn';
-import { getPostList } from '@/lib/post';
+import { getPosts } from '@/lib/post';
 
 const PostsPage = async () => {
-  const postList = await getPostList();
+  const posts = await getPosts();
 
   return (
     <main className={cn('max-w-4xl mx-auto p-2 mt-8 pb-4')}>
-      <PostList postList={postList} />
+      <PostList posts={posts} />
     </main>
   );
 };

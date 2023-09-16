@@ -2,13 +2,13 @@ import { Post } from '@/.contentlayer/generated';
 import PostCard from './post-card';
 
 type PostListProps = {
-  postList: Post[];
+  posts: Post[];
 };
 
-const PostList = ({ postList }: PostListProps) => {
+const PostList = ({ posts }: PostListProps) => {
   return (
     <section className="flex flex-col gap-y-3">
-      {postList.map((post) => (
+      {posts.map((post) => (
         <PostCard
           key={post._id}
           {...post}
