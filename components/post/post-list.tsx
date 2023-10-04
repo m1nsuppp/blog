@@ -7,17 +7,14 @@ type PostListProps = {
 
 const PostList = ({ posts }: PostListProps) => {
   return (
-    <div
-      id="post-list"
-      className="flex flex-col gap-y-3"
-    >
+    <ul className="flex flex-col gap-y-3">
       {posts.map((post) => (
         <PostCard
           key={post._id}
           {...post}
         />
       ))}
-    </div>
+    </ul>
   );
 };
 
