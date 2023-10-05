@@ -7,14 +7,14 @@ type PostListProps = {
 
 const PostList = ({ posts }: PostListProps) => {
   return (
-    <section className="flex flex-col gap-y-3">
+    <ul className="flex flex-col gap-y-3">
       {posts.map((post) => (
         <PostCard
           key={post._id}
           {...post}
         />
       ))}
-    </section>
+    </ul>
   );
 };
 
