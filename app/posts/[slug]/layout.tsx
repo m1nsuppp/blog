@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/lib/constants';
 import { getPostByTitle } from '@/lib/post';
 import { PostDetailPageParams } from '@/types/url-params';
 

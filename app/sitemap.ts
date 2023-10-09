@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/lib/constants';
 import { getPosts } from '@/lib/post';
 import { MetadataRoute } from 'next';
 
