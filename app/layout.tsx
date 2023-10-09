@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
+  manifest: `${siteConfig.url}/site.webmanifest`,
+  robots: {
+    follow: true,
+    index: true,
+  },
   verification: {
     google: 'NbB2lZ4_61PvGarA92ve8GkzLdoM5DRiU4288ys_GR8',
   },
