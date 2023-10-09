@@ -1,7 +1,7 @@
 import Header from '@/components/header/header';
-import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/cn';
-import '@/styles/globals.css';
+import { siteConfig } from '@/lib/constants';
+import './globals.css';
 import { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 
@@ -15,12 +15,20 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ['웹 개발', '프론트엔드', '타입스크립트', 'frontend', 'typescript', 'web development'],
+  keywords: [
+    '웹 개발',
+    '타입스크립트',
+    '자바스크립트',
+    'Web Development',
+    'TypeScript',
+    'JavaScript',
+  ],
   creator: 'm1nsuplee',
   authors: [
     {
@@ -34,8 +42,11 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [siteConfig.ogImage],
     siteName: siteConfig.name,
+  },
+  robots: {
+    follow: true,
+    index: true,
   },
   verification: {
     google: 'NbB2lZ4_61PvGarA92ve8GkzLdoM5DRiU4288ys_GR8',

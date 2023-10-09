@@ -1,5 +1,5 @@
 export type PostDetailPageParams = {
   params: {
-    title: string;
+    slug: string;
   };
 };

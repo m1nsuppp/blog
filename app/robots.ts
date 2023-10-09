@@ -1,4 +1,4 @@
-import { siteConfig } from '@/config/site';
+import { siteConfig } from '@/lib/constants';
 import { MetadataRoute } from 'next';
 
 const robots = (): MetadataRoute.Robots => {

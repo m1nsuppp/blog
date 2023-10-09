@@ -1,6 +1,6 @@
 'use client';
 
-import { NavItem } from '@/types';
+import type { NavItem } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
