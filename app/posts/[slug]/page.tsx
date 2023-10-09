@@ -10,7 +10,7 @@ export const generateStaticParams = async () => {
 };
 
 const PostDetailPage = async ({ params }: PostDetailPageParams) => {
-  const post = await getPostByTitle(params.title);
+  const post = await getPostByTitle(params.slug);
 
   if (!post) {
     notFound();

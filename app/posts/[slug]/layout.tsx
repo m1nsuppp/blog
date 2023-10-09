@@ -7,7 +7,7 @@ type PostLayoutProps = {
 };
 
 export const generateMetadata = async ({ params }: PostDetailPageParams) => {
-  const post = await getPostByTitle(params.title);
+  const post = await getPostByTitle(params.slug);
 
   return {
     title: post?.title,
@@ -25,7 +25,7 @@ export const generateMetadata = async ({ params }: PostDetailPageParams) => {
       url: `${siteConfig.url}${post?.description}`,
       images: [
         {
-          url: post?.thumbnail,
+          url: post?.thumbnail || 'opengraph-image.png',
           width: 300,
           height: 300,
           alt: post?.title,
