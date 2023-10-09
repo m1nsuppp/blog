@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [siteConfig.ogImage],
     siteName: siteConfig.name,
   },
   verification: {
