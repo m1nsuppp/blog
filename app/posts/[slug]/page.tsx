@@ -1,6 +1,6 @@
 import PostArticle from '@/components/post/post-article';
 import { getPostByTitle, getPosts } from '@/lib/post';
-import { PostDetailPageParams } from '@/types/url-params';
+import type { PostDetailPageParams } from '@/types/url-params';
 import { notFound } from 'next/navigation';
 
 export const generateStaticParams = async () => {
