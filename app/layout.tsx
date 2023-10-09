@@ -44,7 +44,6 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
-  manifest: `${siteConfig.url}/site.webmanifest`,
   robots: {
     follow: true,
     index: true,
