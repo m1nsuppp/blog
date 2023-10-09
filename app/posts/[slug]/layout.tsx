@@ -10,25 +10,25 @@ export const generateMetadata = async ({ params }: PostDetailPageParams) => {
   const post = await getPostByTitle(params.slug);
 
   return {
-    title: post?.title,
-    description: post?.description,
+    title: post?.title || siteConfig.name,
+    description: post?.description || siteConfig.description,
     authors: {
       name: siteConfig.author,
-      url: post?.url,
+      url: post?.url || siteConfig.url,
     },
     creator: siteConfig.author,
     openGraph: {
       type: 'article',
       locale: 'ko_KR',
-      title: post?.title,
-      description: post?.description,
-      url: `${siteConfig.url}${post?.description}`,
+      title: post?.title || siteConfig.name,
+      description: post?.description || siteConfig.name,
+      url: `${siteConfig.url}${post?.description || siteConfig.description}`,
       images: [
         {
           url: post?.thumbnail || 'opengraph-image.png',
-          width: 300,
-          height: 300,
-          alt: post?.title,
+          width: 1200,
+          height: 630,
+          alt: post?.title || siteConfig.name,
         },
       ],
     },

@@ -15,12 +15,20 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ['웹 개발', '프론트엔드', '타입스크립트', 'frontend', 'typescript', 'web development'],
+  keywords: [
+    '웹 개발',
+    '타입스크립트',
+    '자바스크립트',
+    'Web Development',
+    'TypeScript',
+    'JavaScript',
+  ],
   creator: 'm1nsuplee',
   authors: [
     {
