@@ -1,11 +1,4 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
-
-export const generateMetadata = (): Metadata => {
-  return {
-    title: '404: 존재하지 않는 페이지',
-  };
-};
 
 const NotFound = () => {
   return (
