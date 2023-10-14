@@ -1,5 +1,3 @@
-'use client';
-
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { Heading } from './toc.type';
 
@@ -24,10 +22,13 @@ const useGetCurrentHeadingID = ({ headings }: UseGetCurrentHeadingIDParams) => {
     threshold: 1.0,
   };
 
-  const observer = useMemo(
-    () => new IntersectionObserver(intersectionObserverCallback, intersectionObserverOptions),
-    [],
-  );
+  const [observer, setObserver] = useState<IntersectionObserver>();
+
+  useEffect(() => {
+    setObserver(
+      new IntersectionObserver(intersectionObserverCallback, intersectionObserverOptions),
+    );
+  }, []);
 
   useEffect(() => {
     headingRefs.current = headings.map((heading) => {
@@ -37,11 +38,11 @@ const useGetCurrentHeadingID = ({ headings }: UseGetCurrentHeadingIDParams) => {
 
   useEffect(() => {
     if (headingRefs) {
-      headingRefs.current.forEach((heading) => observer.observe(heading!));
+      headingRefs.current.forEach((heading) => observer?.observe(heading!));
     }
 
     return () => {
-      observer.disconnect();
+      observer?.disconnect();
     };
   }, [headingRefs, observer]);
 
