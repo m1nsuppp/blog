@@ -35,12 +35,12 @@ export const Post = defineDocumentType(() => ({
 
           const content = groups?.content || '';
 
-          const slug = content ? slugger.slug(content) : '';
+          const id = content ? slugger.slug(content) : '';
 
           return {
             level,
             content,
-            slug,
+            id,
           };
         });
 

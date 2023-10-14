@@ -21,14 +21,7 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    '웹 개발',
-    '타입스크립트',
-    '자바스크립트',
-    'Web Development',
-    'TypeScript',
-    'JavaScript',
-  ],
+  keywords: ['Web', 'JavaScript', 'TypeScript', 'UX'],
   creator: 'm1nsuplee',
   authors: [
     {

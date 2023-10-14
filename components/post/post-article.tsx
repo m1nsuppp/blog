@@ -13,7 +13,7 @@ const PostArticle = (post: Post) => {
     <article className="max-w-2xl mx-auto py-12 px-4 prose dark:prose-invert">
       <h1
         className={cn(
-          'max-w-4xl font-bold md:font-black',
+          'w-full font-bold md:font-black',
           'text-3xl pr-6 md:pr-24 mb-4 mx-auto',
           'text-white hover:text-red-400 tracking-tight',
         )}
