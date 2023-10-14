@@ -1,7 +1,8 @@
 import PostArticle from '@/components/post/post-article';
 import { getPostByTitle, getPosts } from '@/lib/post';
-import type { PostDetailPageParams } from '@/types/url-params';
+import type { PostDetailPageParams } from './slug.type';
 import { notFound } from 'next/navigation';
+import TOC from '@/components/toc';
 
 export const generateStaticParams = async () => {
   const posts = await getPosts();
@@ -16,7 +17,12 @@ const PostDetailPage = async ({ params }: PostDetailPageParams) => {
     notFound();
   }
 
-  return <PostArticle {...post} />;
+  return (
+    <>
+      <PostArticle {...post} />
+      <TOC headings={post.headings} />
+    </>
+  );
 };
 
 export default PostDetailPage;

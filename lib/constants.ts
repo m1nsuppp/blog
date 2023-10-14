@@ -1,15 +1,12 @@
-import type { SiteConfig, NavItem } from '@/types';
-
-export const navItems: NavItem[] = [
-  {
-    title: 'Posts',
-    href: '/posts',
-  },
-  {
-    title: 'GitHub',
-    href: 'https://github.com/m1nsuplee',
-  },
-];
+type SiteConfig = {
+  name: string;
+  description: string;
+  url: string;
+  links: {
+    github: string;
+  };
+  author: string;
+};
 
 export const siteConfig: SiteConfig = {
   name: '바보같이 해',
