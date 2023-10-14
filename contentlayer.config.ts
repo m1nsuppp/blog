@@ -2,6 +2,11 @@ import { defineDocumentType, makeSource } from 'contentlayer/source-files';
 import rehypePrettyCode from 'rehype-pretty-code';
 import remarkMdxImages from 'remark-mdx-images';
 import remarkGfm from 'remark-gfm';
+import rehypeSlug from 'rehype-slug';
+import GithubSlugger from 'github-slugger';
+import { Heading } from './components/toc/toc.type';
+
+const LowestHeadingLevel = 3;
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -18,15 +23,39 @@ export const Post = defineDocumentType(() => ({
       type: 'string',
       resolve: (post) => `/posts/${post._raw.flattenedPath}`,
     },
+    headings: {
+      type: 'json',
+      resolve: async (doc): Promise<Heading[]> => {
+        const regXHeader = /\n(?<flag>#{1,6})\s+(?<content>.+)/g;
+
+        const slugger = new GithubSlugger();
+
+        const headings = Array.from(doc.body.raw.matchAll(regXHeader)).map(({ groups }) => {
+          const level = groups?.flag.length || LowestHeadingLevel;
+
+          const content = groups?.content || '';
+
+          const slug = content ? slugger.slug(content) : '';
+
+          return {
+            level,
+            content,
+            slug,
+          };
+        });
+
+        return headings;
+      },
+    },
   },
 }));
 
 export default makeSource({
-  contentDirPath: 'content',
+  contentDirPath: 'contents',
   documentTypes: [Post],
   mdx: {
     remarkPlugins: [remarkMdxImages, remarkGfm],
-    rehypePlugins: [[rehypePrettyCode]],
+    rehypePlugins: [rehypePrettyCode, rehypeSlug],
     esbuildOptions: (options) => {
       options.loader = {
         ...options.loader,

@@ -1,8 +1,8 @@
 'use client';
 
-import type { NavItem } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { NavItem } from './constants';
 
 type NavigationItemProps = NavItem;
 

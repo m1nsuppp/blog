@@ -6,10 +6,11 @@ import { useMDXComponent } from 'next-contentlayer/hooks';
 
 const PostArticle = (post: Post) => {
   const MDXComponent = useMDXComponent(post.body.code);
+
   const { title } = post;
 
   return (
-    <article className="max-w-4xl mx-auto py-12 px-4 prose dark:prose-invert">
+    <article className="max-w-2xl mx-auto py-12 px-4 prose dark:prose-invert">
       <h1
         className={cn(
           'max-w-4xl font-bold md:font-black',

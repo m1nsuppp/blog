@@ -2,7 +2,7 @@ import Link from 'next/link';
 import NavigationItem from './navigation-item';
 import { cn } from '@/lib/cn';
 import { Montserrat } from 'next/font/google';
-import { navItems } from '@/lib/constants';
+import { navItems } from './constants';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
