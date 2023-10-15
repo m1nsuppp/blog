@@ -1,8 +1,8 @@
-import PostArticle from '@/components/post/post-article';
+import { PostArticle } from '@/components/post/post-article';
 import { getPostByTitle, getPosts } from '@/lib/post';
 import type { PostDetailPageParams } from './slug.type';
 import { notFound } from 'next/navigation';
-import TOC from '@/components/toc';
+import { TOC } from '@/components/toc';
 
 export const generateStaticParams = async () => {
   const posts = await getPosts();

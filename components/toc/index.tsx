@@ -3,13 +3,13 @@
 import Link from 'next/link';
 import { Heading } from './toc.type';
 import { cn } from '@/lib/cn';
-import useGetCurrentHeadingID from './use-get-current-heading-id';
+import { useGetCurrentHeadingID } from './use-get-current-heading-id';
 
 type TOCProps = {
   headings: Heading[];
 };
 
-const TOC = ({ headings }: TOCProps) => {
+export function TOC({ headings }: TOCProps) {
   const { currentHeadingID } = useGetCurrentHeadingID({ headings });
 
   return (
@@ -32,6 +32,4 @@ const TOC = ({ headings }: TOCProps) => {
       ))}
     </ul>
   );
-};
-
-export default TOC;
+}

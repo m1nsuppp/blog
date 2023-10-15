@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import NavigationItem from './navigation-item';
+import { NavigationItem } from './navigation-item';
 import { cn } from '@/lib/cn';
 import { Montserrat } from 'next/font/google';
 import { navItems } from './constants';
@@ -9,7 +9,7 @@ const montserrat = Montserrat({
   weight: '100',
 });
 
-const Navigation = () => {
+export function Navigation() {
   return (
     <nav className={cn('flex justify-between items-end -tracking-widest', montserrat.className)}>
       <Link href={'/'}>
@@ -25,6 +25,4 @@ const Navigation = () => {
       </div>
     </nav>
   );
-};
-
-export default Navigation;
+}

@@ -1,4 +1,4 @@
-import LikeAFool from '@/components/like-a-fool';
+import { LikeAFool } from '@/components/like-a-fool';
 
 const HomePage = () => {
   return (

@@ -6,7 +6,7 @@ import { NavItem } from './constants';
 
 type NavigationItemProps = NavItem;
 
-const NavigationItem = (props: NavigationItemProps) => {
+export function NavigationItem(props: NavigationItemProps) {
   const pathname = usePathname();
 
   const isCurrentPathname = pathname === props.href;
@@ -20,6 +20,4 @@ const NavigationItem = (props: NavigationItemProps) => {
       {props.title}
     </Link>
   );
-};
-
-export default NavigationItem;
+}

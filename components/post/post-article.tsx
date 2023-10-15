@@ -4,7 +4,7 @@ import { Post } from '@/.contentlayer/generated';
 import { cn } from '@/lib/cn';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 
-const PostArticle = (post: Post) => {
+export function PostArticle(post: Post) {
   const MDXComponent = useMDXComponent(post.body.code);
 
   const { title } = post;
@@ -36,6 +36,4 @@ const PostArticle = (post: Post) => {
       />
     </article>
   );
-};
-
-export default PostArticle;
+}
