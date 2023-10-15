@@ -1,11 +1,9 @@
 import { LikeAFool } from '@/components/like-a-fool';
 
-const HomePage = () => {
+export default function HomePage() {
   return (
     <main className="w-screen flex justify-center items-center">
       <LikeAFool />
     </main>
   );
-};
-
-export default HomePage;
+}
