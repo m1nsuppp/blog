@@ -1,7 +1,7 @@
 import { siteConfig } from '@/lib/constants';
 import { MetadataRoute } from 'next';
 
-const robots = (): MetadataRoute.Robots => {
+export default function robots(): MetadataRoute.Robots {
   const baseURL = siteConfig.url;
 
   return {
@@ -11,6 +11,4 @@ const robots = (): MetadataRoute.Robots => {
     },
     sitemap: `${baseURL}/sitemap.xml`,
   };
-};
-
-export default robots;
+}

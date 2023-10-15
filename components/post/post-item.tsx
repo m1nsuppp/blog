@@ -1,7 +1,7 @@
 import { Post } from '@/.contentlayer/generated';
 import Link from 'next/link';
 
-const PostCard = (post: Post) => {
+export function PostItem(post: Post) {
   return (
     <li className="hover:bg-zinc-800 group p-4 rounded">
       <p className="flex flex-col gap-y-4">
@@ -15,6 +15,4 @@ const PostCard = (post: Post) => {
       </p>
     </li>
   );
-};
-
-export default PostCard;
+}

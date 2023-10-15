@@ -1,7 +1,7 @@
 import { cn } from '@/lib/cn';
 import { siteConfig } from '@/lib/constants';
 
-const LikeAFool = () => {
+export function LikeAFool() {
   return (
     <section
       id="like-a-fool"
@@ -17,6 +17,4 @@ const LikeAFool = () => {
       </h1>
     </section>
   );
-};
-
-export default LikeAFool;
+}

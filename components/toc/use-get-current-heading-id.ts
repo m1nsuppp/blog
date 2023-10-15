@@ -1,11 +1,11 @@
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Heading } from './toc.type';
 
 type UseGetCurrentHeadingIDParams = {
   headings: Heading[];
 };
 
-const useGetCurrentHeadingID = ({ headings }: UseGetCurrentHeadingIDParams) => {
+export function useGetCurrentHeadingID({ headings }: UseGetCurrentHeadingIDParams) {
   const headingRefs = useRef<(HTMLElement | null)[]>([]);
 
   const [currentHeadingID, setCurrentHeadingID] = useState<string>('');
@@ -47,6 +47,4 @@ const useGetCurrentHeadingID = ({ headings }: UseGetCurrentHeadingIDParams) => {
   }, [headingRefs, observer]);
 
   return { currentHeadingID };
-};
-
-export default useGetCurrentHeadingID;
+}

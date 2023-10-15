@@ -2,7 +2,7 @@ import { siteConfig } from '@/lib/constants';
 import { getPosts } from '@/lib/post';
 import { MetadataRoute } from 'next';
 
-const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseURL = siteConfig.url;
 
   const posts = await getPosts();
@@ -33,6 +33,4 @@ const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
   }));
 
   return [...homeURL, ...postURL, ...postURLs];
-};
-
-export default sitemap;
+}
