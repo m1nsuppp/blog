@@ -23,14 +23,6 @@ export const generateMetadata = async ({ params }: PostDetailPageParams) => {
       title: post?.title || siteConfig.name,
       description: post?.description || siteConfig.name,
       url: `${siteConfig.url}${post?.description || siteConfig.description}`,
-      images: [
-        {
-          url: post?.thumbnail || 'opengraph-image.png',
-          width: 1200,
-          height: 630,
-          alt: post?.title || siteConfig.name,
-        },
-      ],
     },
   };
 };
