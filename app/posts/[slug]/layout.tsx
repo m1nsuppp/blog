@@ -1,5 +1,5 @@
 import { siteConfig } from '@/lib/constants';
-import { getPostByTitle } from '@/lib/post';
+import { getPostBySlug } from '@/lib/post';
 import type { PostDetailPageParams } from './slug.type';
 
 type PostLayoutProps = {
@@ -7,7 +7,7 @@ type PostLayoutProps = {
 };
 
 export const generateMetadata = async ({ params }: PostDetailPageParams) => {
-  const post = await getPostByTitle(params.slug);
+  const post = await getPostBySlug(params.slug);
 
   return {
     title: post?.title || siteConfig.name,
