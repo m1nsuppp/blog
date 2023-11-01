@@ -10,8 +10,8 @@ export const getPosts = cache(async () => {
   return posts;
 });
 
-export const getPostByTitle = async (title: string) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === title);
+export const getPostBySlug = async (slug: string) => {
+  const post = allPosts.find((post) => post._raw.flattenedPath === slug);
 
   return post;
 };
