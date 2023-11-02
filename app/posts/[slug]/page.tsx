@@ -1,6 +1,6 @@
 import { PostArticle } from '@/components/post/post-article';
 import { getPostBySlug, getPosts } from '@/lib/post';
-import type { PostDetailPageParams } from './slug.type';
+import type { PostDetailPageParams } from './slug.model';
 import { notFound } from 'next/navigation';
 import { TOC } from '@/components/toc';
 

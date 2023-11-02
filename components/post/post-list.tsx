@@ -1,9 +1,9 @@
 import { Post } from '@/.contentlayer/generated';
 import { PostItem } from './post-item';
 
-type PostListProps = {
+interface PostListProps {
   posts: Post[];
-};
+}
 
 export function PostList({ posts }: PostListProps) {
   return (

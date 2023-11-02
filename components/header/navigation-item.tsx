@@ -4,20 +4,18 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { NavItem } from './constants';
 
-type NavigationItemProps = NavItem;
-
-export function NavigationItem(props: NavigationItemProps) {
+export function NavigationItem(navItem: NavItem) {
   const pathname = usePathname();
 
-  const isCurrentPathname = pathname === props.href;
+  const isCurrentPathname = pathname === navItem.href;
 
   return (
     <Link
-      href={props.href}
-      key={props.href}
+      href={navItem.href}
+      key={navItem.href}
       className={isCurrentPathname ? 'text-red-400' : 'text-gray-200'}
     >
-      {props.title}
+      {navItem.title}
     </Link>
   );
 }

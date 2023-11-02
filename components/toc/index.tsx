@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Heading } from './toc.type';
+import { Heading } from './toc.model';
 import { cn } from '@/lib/cn';
 import { useGetCurrentHeadingID } from './use-get-current-heading-id';
 

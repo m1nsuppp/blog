@@ -5,9 +5,9 @@ import './globals.css';
 import { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';
 
-type RootLayoutProps = {
+interface RootLayoutProps {
   children: React.ReactNode;
-};
+}
 
 const notoSansKR = Noto_Sans_KR({
   subsets: ['latin'],
@@ -51,7 +51,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="ko">
       <head />
       <body
-        className={cn('min-h-screen bg-black/90 text-gray-200 font-sans', notoSansKR.className)}
+        className={cn(
+          'min-h-screen bg-black/90 text-gray-200 font-sans',
+          notoSansKR.className,
+        )}
       >
         <Header />
         {children}

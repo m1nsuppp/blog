@@ -1,12 +1,15 @@
 import { siteConfig } from '@/lib/constants';
 import { getPostBySlug } from '@/lib/post';
-import type { PostDetailPageParams } from './slug.type';
+import type { PostDetailPageParams } from './slug.model';
+import type { Metadata } from 'next';
 
-type PostLayoutProps = {
+interface PostLayoutProps {
   children: React.ReactNode;
-};
+}
 
-export const generateMetadata = async ({ params }: PostDetailPageParams) => {
+export async function generateMetadata({
+  params,
+}: PostDetailPageParams): Promise<Metadata> {
   const post = await getPostBySlug(params.slug);
 
   return {
@@ -25,7 +28,7 @@ export const generateMetadata = async ({ params }: PostDetailPageParams) => {
       url: `${siteConfig.url}${post?.description || siteConfig.description}`,
     },
   };
-};
+}
 
 export default function PostRootLayout({ children }: PostLayoutProps) {
   return <main className="max-w-4xl mx-auto p-2">{children}</main>;

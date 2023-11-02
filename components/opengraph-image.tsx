@@ -1,10 +1,12 @@
 import { ImageResponse } from 'next/server';
 
-export type Props = {
+export interface OpengraphImageProps {
   title?: string;
-};
+}
 
-export default async function OpengraphImage(props?: Props): Promise<ImageResponse> {
+export default async function OpengraphImage(
+  props?: OpengraphImageProps,
+): Promise<ImageResponse> {
   const { title } = {
     ...{
       title: process.env.SITE_NAME,
@@ -23,12 +25,12 @@ export default async function OpengraphImage(props?: Props): Promise<ImageRespon
       height: 630,
       fonts: [
         {
-          name: 'Inter',
-          data: await fetch(new URL('../fonts/Montserrat-Thin.ttf', import.meta.url)).then((res) =>
-            res.arrayBuffer(),
-          ),
+          name: 'Noto Sans KR',
+          data: await fetch(
+            new URL('../fonts/NotoSansKR-Medium.ttf', import.meta.url),
+          ).then((res) => res.arrayBuffer()),
           style: 'normal',
-          weight: 100,
+          weight: 500,
         },
       ],
     },

@@ -1,4 +1,4 @@
-type SiteConfig = {
+interface SiteConfig {
   name: string;
   description: string;
   url: string;
@@ -6,7 +6,7 @@ type SiteConfig = {
     github: string;
   };
   author: string;
-};
+}
 
 export const siteConfig: SiteConfig = {
   name: '바보같이 해',

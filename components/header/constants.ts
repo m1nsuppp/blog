@@ -1,7 +1,7 @@
-export type NavItem = {
+export interface NavItem {
   title: string;
   href: string;
-};
+}
 
 export const navItems: NavItem[] = [
   {

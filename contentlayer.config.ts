@@ -4,7 +4,7 @@ import remarkMdxImages from 'remark-mdx-images';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import GithubSlugger from 'github-slugger';
-import { Heading } from './components/toc/toc.type';
+import { Heading } from './components/toc/toc.model';
 
 const LowestHeadingLevel = 3;
 
@@ -29,19 +29,21 @@ export const Post = defineDocumentType(() => ({
 
         const slugger = new GithubSlugger();
 
-        const headings = Array.from(doc.body.raw.matchAll(regXHeader)).map(({ groups }) => {
-          const level = groups?.flag.length || LowestHeadingLevel;
+        const headings = Array.from(doc.body.raw.matchAll(regXHeader)).map(
+          ({ groups }) => {
+            const level = groups?.flag.length || LowestHeadingLevel;
 
-          const content = groups?.content || '';
+            const content = groups?.content || '';
 
-          const id = content ? slugger.slug(content) : '';
+            const id = content ? slugger.slug(content) : '';
 
-          return {
-            level,
-            content,
-            id,
-          };
-        });
+            return {
+              level,
+              content,
+              id,
+            };
+          },
+        );
 
         return headings;
       },

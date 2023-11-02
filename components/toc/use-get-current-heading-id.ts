@@ -1,16 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
-import { Heading } from './toc.type';
+import { Heading } from './toc.model';
 
-type UseGetCurrentHeadingIDParams = {
+interface UseGetCurrentHeadingIDParams {
   headings: Heading[];
-};
+}
 
-export function useGetCurrentHeadingID({ headings }: UseGetCurrentHeadingIDParams) {
+export function useGetCurrentHeadingID({
+  headings,
+}: UseGetCurrentHeadingIDParams): { currentHeadingID: string } {
   const headingRefs = useRef<(HTMLElement | null)[]>([]);
 
   const [currentHeadingID, setCurrentHeadingID] = useState<string>('');
 
-  const intersectionObserverCallback: IntersectionObserverCallback = (entries) => {
+  const intersectionObserverCallback: IntersectionObserverCallback = (
+    entries,
+  ) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setCurrentHeadingID(entry.target.id);
@@ -26,7 +30,10 @@ export function useGetCurrentHeadingID({ headings }: UseGetCurrentHeadingIDParam
 
   useEffect(() => {
     setObserver(
-      new IntersectionObserver(intersectionObserverCallback, intersectionObserverOptions),
+      new IntersectionObserver(
+        intersectionObserverCallback,
+        intersectionObserverOptions,
+      ),
     );
   }, []);
 
