@@ -27,7 +27,7 @@ export default async function OpengraphImage(
         {
           name: 'Noto Sans KR',
           data: await fetch(
-            new URL('../fonts/NotoSansKR-Medium.ttf', import.meta.url),
+            new URL('../fonts/NotoSans-Thin.ttf', import.meta.url),
           ).then((res) => res.arrayBuffer()),
           style: 'normal',
           weight: 500,
