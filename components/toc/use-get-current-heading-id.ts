@@ -1,0 +1,57 @@
+import { useEffect, useRef, useState } from 'react';
+import { Heading } from './toc.model';
+
+interface UseGetCurrentHeadingIDParams {
+  headings: Heading[];
+}
+
+export function useGetCurrentHeadingID({
+  headings,
+}: UseGetCurrentHeadingIDParams): { currentHeadingID: string } {
+  const headingRefs = useRef<(HTMLElement | null)[]>([]);
+
+  const [currentHeadingID, setCurrentHeadingID] = useState<string>('');
+
+  const intersectionObserverCallback: IntersectionObserverCallback = (
+    entries,
+  ) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setCurrentHeadingID(entry.target.id);
+      }
+    });
+  };
+
+  const intersectionObserverOptions: IntersectionObserverInit = {
+    threshold: 1.0,
+  };
+
+  const [observer, setObserver] = useState<IntersectionObserver>();
+
+  useEffect(() => {
+    setObserver(
+      new IntersectionObserver(
+        intersectionObserverCallback,
+        intersectionObserverOptions,
+      ),
+    );
+  }, []);
+
+  useEffect(() => {
+    headingRefs.current = headings.map((heading) => {
+      return document.getElementById(heading.id);
+    });
+  }, []);
+
+  useEffect(() => {
+    if (headingRefs) {
+      headingRefs.current.forEach((heading) => observer?.observe(heading!));
+    }
+
+    return () => {
+      observer?.disconnect();
+    };
+  }, [headingRefs, observer]);
+
+  return { currentHeadingID };
+}
