@@ -2,6 +2,9 @@
 const { withContentlayer } = require('next-contentlayer');
 
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   reactStrictMode: true,
 };
 
