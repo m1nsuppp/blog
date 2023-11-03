@@ -49,7 +49,7 @@ export function useGetCurrentHeadingID({
     }
 
     return () => {
-      observer?.disconnect();
+      observer && observer.disconnect();
     };
   }, [headingRefs, observer]);
 

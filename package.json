@@ -15,7 +15,10 @@
     "pre-commit": "lint-staged"
   },
   "lint-staged": {
-    "*": "prettier --write --ignore-unknown"
+    "*.{ts,tsx}": [
+      "prettier --write --ignore-unknown",
+      "eslint"
+    ]
   },
   "dependencies": {
     "contentlayer": "^0.3.4",
