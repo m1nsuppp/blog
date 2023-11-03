@@ -18,6 +18,8 @@
         "vars": "all"
       }
     ],
+    "no-console": "error",
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/explicit-function-return-type": "error",
     "prefer-const": "error",
     "unicorn/filename-case": [
