@@ -1,5 +1,5 @@
 import { cn } from '@/lib/cn';
-import { siteConfig } from '@/lib/constants';
+import { siteConfig } from '@/lib/config';
 
 export function LikeAFool() {
   return (

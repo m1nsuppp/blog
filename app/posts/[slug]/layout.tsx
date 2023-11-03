@@ -1,4 +1,4 @@
-import { siteConfig } from '@/lib/constants';
+import { siteConfig } from '@/lib/config';
 import { getPostBySlug } from '@/lib/post';
 import type { PostDetailPageParams } from './slug.model';
 import type { Metadata } from 'next';

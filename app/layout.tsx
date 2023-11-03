@@ -1,6 +1,6 @@
 import Header from '@/components/header/header';
 import { cn } from '@/lib/cn';
-import { siteConfig } from '@/lib/constants';
+import { siteConfig } from '@/lib/config';
 import './globals.css';
 import { Metadata } from 'next';
 import { Noto_Sans_KR } from 'next/font/google';

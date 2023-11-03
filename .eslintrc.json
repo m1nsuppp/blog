@@ -1,6 +1,13 @@
 {
-  "extends": ["next", "prettier"],
-  "plugins": ["unicorn"],
+  "extends": [
+    "next",
+    "prettier",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["unicorn", "@typescript-eslint"],
+  "root": true,
   "rules": {
     "no-unused-vars": [
       "error",
@@ -11,6 +18,7 @@
         "vars": "all"
       }
     ],
+    "@typescript-eslint/explicit-function-return-type": "error",
     "prefer-const": "error",
     "unicorn/filename-case": [
       "error",
@@ -18,5 +26,13 @@
         "case": "kebabCase"
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": "off"
+      }
+    }
+  ]
 }
