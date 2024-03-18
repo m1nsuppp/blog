@@ -4,13 +4,13 @@ import type * as Preset from '@docusaurus/preset-classic';
 import { siteConfig } from './src/lib/config/site.config';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: siteConfig.title,
+  tagline: siteConfig.description,
   favicon: 'img/favicon.ico',
-  url: 'https://like-a-fool.xyz',
+  url: 'https://www.like-a-fool.xyz',
   baseUrl: '/',
   organizationName: 'm1nsuplee',
-  projectName: 'blog',
+  projectName: 'like-a-fool',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
