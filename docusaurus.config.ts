@@ -1,6 +1,7 @@
 import { themes as prismThemes } from 'prism-react-renderer';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import { siteConfig } from './src/lib/config/site.config';
 
 const config: Config = {
   title: 'My Site',
@@ -25,19 +26,19 @@ const config: Config = {
           routeBasePath: '/', // Serve the blog at the site's root
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/styles/globals.css',
         },
       },
     ],
   ],
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/like-a-fool-social-card.png',
     navbar: {
-      title: '바보깉이 해',
+      title: siteConfig.title,
       logo: {
-        alt: '바보같이 해',
-        src: 'img/logo.svg',
+        alt: siteConfig.title,
+        src: 'img/logo.png',
       },
       items: [
         {
