@@ -1,11 +1,11 @@
 ---
 slug: how-to-detect-page-leave-in-nextjs-app
-title: Next.js App에서 페이지 이동을 감지하는 법
+title: 사용자에게 최상의 저장 경험을 제공하기 위한 기술적 고민
 authors: m1nsuplee
 tags: [react, next.js]
 ---
 
-사용자에게 최상의 저장 경험을 제공하기 위한 기술적 고민
+Next.js App에서 페이지 이동을 감지하는 법
 
 <!--truncate-->
 
