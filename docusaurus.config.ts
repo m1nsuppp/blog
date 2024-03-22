@@ -24,6 +24,8 @@ const config: Config = {
         docs: false, // Optional: disable the docs plugin
         blog: {
           routeBasePath: '/', // Serve the blog at the site's root
+          blogSidebarTitle: '최근 작성한 글',
+          blogSidebarCount: 'ALL',
         },
         theme: {
           customCss: './src/styles/globals.css',
