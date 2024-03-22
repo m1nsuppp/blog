@@ -36,6 +36,12 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/like-a-fool-social-card.png',
+    metadata: [
+      {
+        name: 'google-site-verification',
+        content: 'NbB2lZ4_61PvGarA92ve8GkzLdoM5DRiU4288ys_GR8',
+      },
+    ],
     navbar: {
       title: siteConfig.title,
       logo: {
