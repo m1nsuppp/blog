@@ -1,6 +1,6 @@
 ---
 slug: a-year-as-a-yes-man
-title: 예스맨으로 1년 살아보기
+title: 안된다고 말하지 않기
 authors: m1nsuplee
 tags: [회고]
 ---
