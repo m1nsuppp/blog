@@ -14,6 +14,8 @@ tags: [react, next.js]
 
 <!--truncate-->
 
+> 이 글은 제가 [nextjs-router-events](https://www.npmjs.com/package/nextjs-router-events)라는 `app router`에서 route event를 감지할 수 있게 도와주는 라이브러리를 만나기 전에 겪은 일입니다. 그러니까 바퀴를 재발명 하지마시고 이 라이브러리를 사용하는 것이 좋은 선택지가 될 것 같습니다! - 2024.04.03
+
 ## `beforeunload` 이벤트와 SPA, MPA
 
 자동 저장 기능 로직을 개발하고자 조사를 진행 하던 중, [beforeunload 이벤트](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event)에 대해 알게 되었습니다.
