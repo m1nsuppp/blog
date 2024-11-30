@@ -25,7 +25,7 @@ const config: Config = {
         blog: {
           routeBasePath: '/', // Serve the blog at the site's root
           blogSidebarTitle: '최근 작성한 글',
-          blogSidebarCount: 'ALL',
+          blogSidebarCount: 3,
         },
         theme: {
           customCss: './src/styles/globals.css',
