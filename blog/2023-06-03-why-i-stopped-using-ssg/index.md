@@ -58,7 +58,7 @@ Static Site Generation(SSG)을 사용하면서 가장 큰 문제는 데이터의
 
 공식 문서와 Vercel repo는 SSG 없이, fetch API를 이용하여 data caching 하는 기법을 적용하고 있었습니다. [Vercel repo를 통해 운영 중인 웹사이트](https://demo.vercel.store/)를 이용해보니 퍼포먼스가 놀라울 정도로 훌륭했습니다. SSG가 아니라는 점이 상당히 놀라울 정도로.
 
-사실 저는 학생 때, Next.js(pages router)의 SSR을 애플리케이션에 적용해본 적이 있었는데, 너무 좋지 않은 경험을 했기에 Next.js가 제공하는 SSR에 상당히 부정적이었습니다(페이지 로딩 속도가 너무 느렸다).
+제가 이전에 사용했던 Pages router의 SSR 경험은 그닥 좋지 못했습니다. 그 이유는 TTFB가 너무 느렸기 때문입니다.
 
 그런데 SSR로 이런 퍼포먼스를 보여준다는 것이 너무 놀라웠습니다. 의심이 되어 HTTP 응답 헤더를 분석해보았는데, 캐싱이 적용되어있지 않았습니다.
 
