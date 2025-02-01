@@ -1,7 +1,7 @@
 ---
 slug: get-bounding-client-rect
 title: 왜 안드로이드에서 바텀시트 스크롤이 안되는건데?!!
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [Web API, DOM, getBoundingClientRect]
 ---
 

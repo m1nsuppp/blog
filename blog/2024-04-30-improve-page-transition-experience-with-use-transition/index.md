@@ -1,7 +1,7 @@
 ---
 slug: improve-page-transition-experience-with-use-transition
 title: useTransition으로 페이지 이동 경험 개선하기
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [react, next.js]
 ---
 

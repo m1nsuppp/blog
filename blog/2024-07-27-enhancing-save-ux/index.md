@@ -1,7 +1,7 @@
 ---
 slug: enhancing-save-ux
 title: 사용자의 저장 경험 개선을 위한 기술적 고민
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [react, next.js]
 ---
 
@@ -77,7 +77,7 @@ fetch(`/api/projects/${projectId}`, {
 useBeforeUnload(() => {
   canvasToImageFile((imageFile) => {
     navigator.serviceWorker.controller.postMessage({
-      type: 'UPDATE_PROJECT',
+      type: "UPDATE_PROJECT",
       project,
       imageFile,
     });
@@ -114,14 +114,14 @@ useBeforeUnload(() => {
 3. stale한 project의 썸네일 이미지(JavaScript `Blob` 객체)
 
 ```typescript
-import { openDB, DBSchema } from 'idb';
+import { openDB, DBSchema } from "idb";
 
 export type DraftProjectKey =
-  | 'draftProjectIds'
+  | "draftProjectIds"
   | `drafts/${string}/project.json`
   | `drafts/${string}/thumbnail.png`;
 
-type DraftProjectValue<K extends DraftProjectKey> = K extends 'draftProjectIds'
+type DraftProjectValue<K extends DraftProjectKey> = K extends "draftProjectIds"
   ? string[]
   : K extends `drafts/${string}/project.json`
   ? ProjectInfo
@@ -144,9 +144,9 @@ interface MyDB extends DBSchema {
 
 ```typescript
 const openMyDB = () => {
-  return openDB<MyDB>('PhotioDB', 1, {
+  return openDB<MyDB>("PhotioDB", 1, {
     upgrade(db) {
-      db.createObjectStore('projects');
+      db.createObjectStore("projects");
     },
   });
 };
@@ -155,7 +155,7 @@ async function get<K extends DraftProjectKey>(
   key: K
 ): Promise<DraftProjectValue<K> | undefined> {
   const db = await openMyDB();
-  return db.get('projects', key) as Promise<DraftProjectValue<K> | undefined>;
+  return db.get("projects", key) as Promise<DraftProjectValue<K> | undefined>;
 }
 
 async function put<K extends DraftProjectKey>(
@@ -163,7 +163,7 @@ async function put<K extends DraftProjectKey>(
   value: DraftProjectValue<K>
 ): Promise<void> {
   const db = await openMyDB();
-  await db.put('projects', value, key);
+  await db.put("projects", value, key);
 }
 ```
 

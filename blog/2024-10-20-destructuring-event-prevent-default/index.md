@@ -1,7 +1,7 @@
 ---
 slug: destructuring-event-prevent-default
 title: 왜 Event.preventDefault()를 구조 분해 할당 하면 안 될까?
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [javascript, this]
 ---
 

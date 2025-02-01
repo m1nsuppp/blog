@@ -1,7 +1,7 @@
 ---
 slug: npm-download-count-incident
 title: npm 다운로드 200+ 달성
-authors: m1nsuplee
+authors: m1nsuppp
 ---
 
 이걸 왜 다운로드 받지?!!

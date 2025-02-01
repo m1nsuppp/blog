@@ -1,7 +1,7 @@
 ---
 slug: dip
 title: DIP 준수로 변화에 유연하게 대응하기
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [solid, dip]
 ---
 

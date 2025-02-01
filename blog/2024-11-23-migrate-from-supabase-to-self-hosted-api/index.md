@@ -1,7 +1,7 @@
 ---
 slug: migrate-from-supabase-to-self-hosted-api
 title: Supabase에서 자체 API 서버로, IoC와 의존성 제어 활용기
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [ioc]
 ---
 

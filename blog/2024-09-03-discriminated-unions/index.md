@@ -1,7 +1,7 @@
 ---
 slug: discriminated-union
 title: UI 상태 안전하게 관리하기
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [typescript]
 ---
 
@@ -36,7 +36,7 @@ interface Form {
 
 // 폼 제출 방식 인터페이스 정의
 interface FormSubmission {
-  method: 'email' | 'emailAndKakao';
+  method: "email" | "emailAndKakao";
   data?: Form;
 }
 ```
@@ -55,7 +55,7 @@ interface FormSubmission {
 
 ```typescript
 setFormSubmission({
-  method: 'emailAndKakao',
+  method: "emailAndKakao",
   // 요구사항과 다르게 data 필드를 비웠음에도 오류가 발생하지 않는다.
 });
 ```
@@ -79,10 +79,10 @@ setFormSubmission({
 ```typescript
 type NotificationConfig =
   | {
-      type: 'emailOnly';
+      type: "emailOnly";
     }
   | {
-      type: 'emailAndKakao';
+      type: "emailAndKakao";
       phoneNumber: string;
       consent: boolean;
     };

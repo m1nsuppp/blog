@@ -1,7 +1,7 @@
 ---
 slug: adapter-pattern-in-react
 title: 서로 다른 인터페이스를 하나의 인터페이스로, 어댑터 패턴 실전 적용기
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [adapter-pattern, design-pattern, react]
 ---
 

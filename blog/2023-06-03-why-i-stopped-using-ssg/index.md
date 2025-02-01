@@ -1,7 +1,7 @@
 ---
 slug: why-i-stopped-using-ssg
 title: 내가 Next.js SSG를 버린 이유, 빌드 시간을 15분에서 2분으로
-authors: m1nsuplee
+authors: m1nsuppp
 tags: [next.js, ssg, ssr]
 ---
 
