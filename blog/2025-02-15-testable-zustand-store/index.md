@@ -2,7 +2,6 @@
 slug: testable-zustand-store
 title: 의존성 주입을 활용하여 테스트 가능한 Zustand store 만들기
 authors: m1nsuppp
-tags: [Zustand, test, Context API, Dependency Injection]
 ---
 
 React Context API를 의존성 주입 도구로 활용하여 Mocking 없이 Zustand store 테스트하기

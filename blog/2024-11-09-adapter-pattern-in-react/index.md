@@ -2,7 +2,6 @@
 slug: adapter-pattern-in-react
 title: 서로 다른 인터페이스를 하나의 인터페이스로, 어댑터 패턴 실전 적용기
 authors: m1nsuppp
-tags: [adapter-pattern, design-pattern, react]
 ---
 
 결제 수단 변경 기능을 구현하며 마주쳤던 컴포넌트 인터페이스 문제를 어댑터 패턴으로 해결한 경험

@@ -2,7 +2,6 @@
 slug: dip
 title: DIP 준수로 변화에 유연하게 대응하기
 authors: m1nsuppp
-tags: [solid, dip]
 ---
 
 DIP 원칙을 통해 요구사항 변화에 유연하게 대응한 경험, feat: TanStack Query
