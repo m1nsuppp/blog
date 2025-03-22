@@ -2,7 +2,7 @@
 slug: migrate-from-supabase-to-self-hosted-api
 title: Supabase에서 자체 API 서버로, IoC와 의존성 제어 활용기
 authors: m1nsuppp
-tags: [ioc]
+tags: [ioc, frontend]
 ---
 
 Supabase에서 자체 API 서버로 전환하는 과정에서 제어의 역전(IoC)과 의존성 제어를 어떻게 활용했는지에 대한 경험

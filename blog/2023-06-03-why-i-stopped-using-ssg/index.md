@@ -2,6 +2,7 @@
 slug: why-i-stopped-using-ssg
 title: 내가 Next.js SSG를 버린 이유, 빌드 시간을 15분에서 2분으로
 authors: m1nsuppp
+tags: [next.js, ssg, ssr, frontend]
 ---
 
 Static Site Generation(SSG)에서 콘텐츠가 늘어날수록 빌드 시간은 기하급수적으로 증가합니다. 특히 상세 페이지의 개수가 늘어날수록 빌드 시간이 15분까지 늘어나면서 개발 경험에 심각한 악영향을 미쳤습니다.

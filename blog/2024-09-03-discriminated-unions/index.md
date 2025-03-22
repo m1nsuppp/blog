@@ -2,6 +2,7 @@
 slug: discriminated-union
 title: UI 상태 안전하게 관리하기
 authors: m1nsuppp
+tags: [discriminated union, typescript, frontend]
 ---
 
 TypeScript의 Discriminated Union을 활용해서 UI 상태 안전하게 관리하기

@@ -2,6 +2,7 @@
 slug: what-is-business-logic-in-fe
 title: 비즈니스 로직과 햇감자 포카칩
 authors: m1nsuppp
+tags: [business logic, frontend]
 ---
 
 포카칩으로 알아보는 비즈니스 로직
