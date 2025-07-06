@@ -5,7 +5,7 @@ authors: m1nsuppp
 tags: [data structure]
 ---
 
-Configurable Schema를 활용해 다양한 고객사의 요구사항을 하나의 코드로 만족시키기 위해 노력했던 고민
+Configurable Schema를 활용해 다양한 고객사의 요구사항을 만족시키기 위해 노력했던 고민
 
 <!--truncate-->
 
