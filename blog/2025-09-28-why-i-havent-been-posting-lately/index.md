@@ -3,7 +3,6 @@ slug: why-i-havent-been-posting-lately
 title: 블로그 포스팅이 뜸해진 이유와 반성
 authors: m1nsuppp
 tags: []
-draft: true
 ---
 
 AI, 그리고 나
