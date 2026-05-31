@@ -38,7 +38,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: "img/m1nsuppp-card.png",
+    image: "img/m1nsuplee-card.png",
     metadata: [
       {
         name: "google-site-verification",
@@ -55,6 +55,11 @@ const config: Config = {
         {
           href: "https://github.com/m1nsuppp",
           label: "GitHub",
+          position: "right",
+        },
+        {
+          href: "/rss.xml",
+          label: "RSS",
           position: "right",
         },
       ],
