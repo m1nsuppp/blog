@@ -22,6 +22,10 @@ const config: Config = {
       "classic",
       {
         docs: false, // Optional: disable the docs plugin
+        gtag: {
+          trackingID: "G-XE26X99BE5",
+          anonymizeIP: true,
+        },
         blog: {
           routeBasePath: "/", // Serve the blog at the site's root
           blogSidebarTitle: "최근 작성한 글",
