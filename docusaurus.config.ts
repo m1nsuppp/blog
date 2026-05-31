@@ -7,7 +7,7 @@ const config: Config = {
   title: siteConfig.title,
   tagline: siteConfig.description,
   favicon: "img/favicon.ico",
-  url: "https://m1nsuppp.vercel.app",
+  url: "https://blog.m1nsuppp.com",
   baseUrl: "/",
   organizationName: "m1nsuppp",
   projectName: "m1nsuppp의 블로그",
