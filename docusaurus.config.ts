@@ -58,7 +58,7 @@ const config: Config = {
           position: "right",
         },
         {
-          href: "/rss.xml",
+          href: "https://blog.m1nsuppp.com/rss.xml",
           label: "RSS",
           position: "right",
         },
