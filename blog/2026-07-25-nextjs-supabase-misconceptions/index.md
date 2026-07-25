@@ -2,7 +2,7 @@
 slug: nextjs-supabase-misconceptions
 title: 바이브코딩 국민스택 Next.js + Supabase 조합을 더 잘 이해하기 위해 오해를 풉시다.
 authors: m1nsuppp
-tags: [nextjs, supabase]
+tags: [next.js, supabase]
 ---
 
 일단 이 기술스택을 잘 이해하기 위해서는 Supabase, Next.js에 대한 오해를 바로잡는 게 제일 우선이라고 생각한다. 이 오해들을 바로 잡지 못하면, 혼란스러울 수 있다.
