@@ -47,6 +47,6 @@ DB 변경에 프론트엔드 코드가 죽는다. 백엔드 애플리케이션�
 
 나는 사실 Next.js 풀스택으로 인한 인지 혼란에 큰 고통을 받았던 사람이다. 그런 이유로 최근에는 새로운 조합의 기술을 선택하고 있다.
 
-- DB: Drizzle ORM과 Supabase에 붙은 PostgreSQL, 이유는 그저 AWS보다 저렴하기 때문이다. DB를 Web UI로 보기 편한 것도 장점이고, Auth가 매우 맘에든다. 단, Supabase SDK를 통한 Data API는 비활성화한다. 이렇게 하면, Supabase SDK를 통한 HTTP 요청이 불가능하다.
+- DB: Drizzle ORM과 Supabase에 붙은 PostgreSQL, 이유는 AWS보다 저렴하고. DB를 Web UI로 보기 편하면서 Auth가 매우 맘에든다. 단, Supabase SDK를 통한 Data API는 비활성화한다. 이렇게 하면, Supabase SDK를 통한 HTTP 요청이 불가능하다.
 - Backend: Hono.js
 - Frontend: Vite + React SPA
