@@ -38,7 +38,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: "img/m1nsuplee-card.png",
+    image: "img/og-blog.webp",
     metadata: [
       {
         name: "google-site-verification",
