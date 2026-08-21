@@ -12,7 +12,11 @@ const config: Config = {
   organizationName: "m1nsuppp",
   projectName: "m1nsuppp의 블로그",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   i18n: {
     defaultLocale: "ko",
     locales: ["ko"],
@@ -30,9 +34,20 @@ const config: Config = {
           routeBasePath: "/", // Serve the blog at the site's root
           blogSidebarTitle: "최근 작성한 글",
           blogSidebarCount: 3,
+          // routeBasePath가 "/"라 목록 페이지가 곧 홈이다.
+          // 지정하지 않으면 플러그인 기본값 "Blog"가 홈의 description이 된다.
+          blogTitle: siteConfig.title,
+          blogDescription: siteConfig.description,
         },
         theme: {
           customCss: "./src/styles/globals.css",
+        },
+        sitemap: {
+          lastmod: "date",
+          changefreq: "weekly",
+          priority: 0.5,
+          // 글 1편을 그대로 복제하는 얇은 페이지들은 색인 대상에서 제외한다.
+          ignorePatterns: ["/tags/**", "/archive", "/authors/**", "/page/**"],
         },
       },
     ],

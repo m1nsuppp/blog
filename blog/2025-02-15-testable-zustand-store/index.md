@@ -1,8 +1,9 @@
 ---
 slug: testable-zustand-store
 title: 의존성 주입을 활용하여 테스트 가능한 Zustand store 만들기
+description: "전역 싱글톤 Zustand store는 테스트마다 독립적인 환경을 만들기 어렵다. React Context API를 의존성 주입 도구로 활용해 mocking 없이 store를 테스트한 방법."
 authors: m1nsuppp
-tags: [testing, zustand, react, frontend]
+tags: [react, typescript, frontend]
 ---
 
 React Context API를 의존성 주입 도구로 활용하여 Mocking 없이 Zustand store 테스트하기

@@ -1,8 +1,9 @@
 ---
 slug: multi-tenant-configuration-model
 title: 고객사별 맞춤형 B2B SaaS로 나아가기 위한 데이터 모델링 전략
+description: "고객사가 늘어날 때마다 스키마를 바꾸지 않으려면? Configurable Schema와 메타데이터 기반 접근으로 B2B SaaS의 고객사별 요구사항을 처리한 데이터 모델링 전략."
 authors: m1nsuppp
-tags: [data structure]
+tags: [software-design]
 ---
 
 Configurable Schema를 활용해 다양한 고객사의 요구사항을 만족시키기 위해 노력했던 고민

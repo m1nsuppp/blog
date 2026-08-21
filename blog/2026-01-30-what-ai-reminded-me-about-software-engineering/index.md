@@ -1,8 +1,9 @@
 ---
 slug: what-ai-reminded-me-about-software-engineering
 title: AI가 환기한 엔지니어링의 본질
+description: "AI가 작성한 코드는 검증이 필요하다는 말에는 사람의 코드는 신뢰할 수 있다는 전제가 숨어 있다. AI 시대에 다시 생각해본 코드 리뷰와 엔지니어링의 본질."
 authors: m1nsuppp
-tags: []
+tags: [회고]
 ---
 
 <!--truncate-->

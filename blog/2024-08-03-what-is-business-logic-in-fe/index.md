@@ -1,8 +1,9 @@
 ---
 slug: what-is-business-logic-in-fe
 title: 비즈니스 로직과 햇감자 포카칩
+description: "프론트엔드에서 데이터를 요청하고 조작하는 것이 비즈니스 로직일까? 포카칩 생산 과정에 빗대어 비즈니스 로직의 경계가 어디인지 설명한다."
 authors: m1nsuppp
-tags: [business logic, frontend]
+tags: [frontend, software-design]
 ---
 
 포카칩으로 알아보는 비즈니스 로직
