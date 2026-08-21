@@ -1,6 +1,7 @@
 ---
 slug: nextjs-supabase-misconceptions
 title: 바이브코딩 국민스택 Next.js + Supabase 조합을 더 잘 이해하기 위해 오해를 풉시다.
+description: "Next.js는 프론트엔드 프레임워크가 아니고, Supabase는 프론트엔드에서 DB를 직접 제어하는 도구가 아니다. 두 기술에 대한 흔한 오해를 바로잡는다."
 authors: m1nsuppp
 tags: [next.js, supabase]
 ---

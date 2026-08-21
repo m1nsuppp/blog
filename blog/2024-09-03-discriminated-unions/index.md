@@ -1,8 +1,9 @@
 ---
 slug: discriminated-union
 title: UI 상태 안전하게 관리하기
+description: "TypeScript의 Discriminated Union으로 불가능한 UI 상태를 타입 수준에서 차단하는 방법. 실제 코드 리뷰에서 마주친 요구사항을 예시로 설명한다."
 authors: m1nsuppp
-tags: [discriminated union, typescript, frontend]
+tags: [typescript, frontend, software-design]
 ---
 
 TypeScript의 Discriminated Union을 활용해서 UI 상태 안전하게 관리하기

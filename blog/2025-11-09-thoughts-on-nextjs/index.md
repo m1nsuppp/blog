@@ -1,8 +1,9 @@
 ---
 slug: thoughts-on-nextjs
 title: Next.js에 대한 생각
+description: "가장 선호하던 Next.js + Supabase 스택을 다시 생각하게 된 이유. 프레임워크가 더 많은 기능을 품을수록 개발자가 짊어지는 복잡성에 대한 기록."
 authors: m1nsuppp
-tags: []
+tags: [next.js]
 ---
 
 그리고 프레임워크에 대한 생각

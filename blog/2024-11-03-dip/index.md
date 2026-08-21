@@ -1,8 +1,9 @@
 ---
 slug: dip
 title: DIP 준수로 변화에 유연하게 대응하기
+description: "의존성 역전 원칙(DIP)을 적용해 요구사항 변화에 유연하게 대응한 경험. 특정 라이브러리에 직접 의존하던 코드를 인터페이스 뒤로 감춘 과정을 다룬다."
 authors: m1nsuppp
-tags: [dip, frontend]
+tags: [software-design, frontend]
 ---
 
 DIP 원칙을 통해 요구사항 변화에 유연하게 대응한 경험, feat: TanStack Query
